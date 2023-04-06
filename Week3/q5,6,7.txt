@@ -13,6 +13,7 @@ Solution:- The size of a C structure is determined by the total size of its memb
 The size of a structure is calculated by adding the size of each member, taking into account any padding that may be added by the compiler for alignment purposes. The size of the structure will also be affected by the compiler and the underlying hardware architecture.
 
 For example
+
 struct MyStruct {
   char a;
   int b;
