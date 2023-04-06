@@ -1,0 +1,25 @@
+q5.(a) The answer is 
+(i) k is a pointer to a pointer to a pointer to a char.
+
+(b)the answer is 
+(iii) 6
+
+q6.The correct statement is 
+(a) structure elements can be initialised at the time of declaration.
+
+q7.
+Solution:- The size of a C structure is determined by the total size of its members. Each member of a structure occupies a certain amount of memory depending on its data type and alignment requirements.
+
+The size of a structure is calculated by adding the size of each member, taking into account any padding that may be added by the compiler for alignment purposes. The size of the structure will also be affected by the compiler and the underlying hardware architecture.
+
+For example
+struct MyStruct {
+  char a;
+  int b;
+  float c;
+};
+In this structure, 'a' is a 'char', which typically takes 1 byte of memory, 'b' is an 'int', which typically takes 4 bytes of memory, and 'c' is a 'float', which typically takes 4 bytes of memory. However, the total size of the structure may not be 9 bytes, since the compiler may add padding to ensure that each member is properly aligned in memory. For example, on a 32-bit architecture, the compiler may add 3 bytes of padding after 'a' to ensure that 'b' is properly aligned on a 4-byte boundary. Similarly, the compiler may add 0 or more bytes of padding after 'b' to ensure that 'c' is properly aligned on a 4-byte boundary.
+
+To calculate the size of this structure, we can use the 'sizeof' operator in C:
+size_t size = sizeof(struct MyStruct);
+The 'sizeof' operator returns the size of a variable or data type in bytes. In this case, 'size' would be equal to the total size of the structure, including any padding that may be added by the compiler.
